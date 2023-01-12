@@ -22,11 +22,12 @@ body {
 /*Navigation Styles*/
 
 .navbar-inner {
-  background-image: url("images/whole-bean-coffee.png");
-  background-image: url("../images/whole-bean-coffee.png");
+  background-image: url("../images/whole-bean-coffee.png")  ;
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.6)));
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .logo {
   width: 105px;
   height: 105px;
@@ -98,6 +99,9 @@ btn:focus {
   background-color: var(--main-bg-color);
   text-align: center;
 }
+.card-one-height, .card-two-height{
+  height: 94.8%;
+}
 .card-text-custom {
   font-family: var(--main-font-family);
   font-weight: 300;
@@ -126,11 +130,11 @@ img {
 }
 .company-link-footer {
   color: var(--footer-text-color);
-  text-decoration: none;
 }
 .email-link {
   color: var(--footer-text-color);
   text-decoration: none;
+  word-break: break-word;
 }
 
 /*End Of CSS Styles*/
@@ -202,5 +206,10 @@ img {
   }
   .nav-link-item-custom {
     margin: 0 3rem;
+  }
+  .logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
   }
 }
