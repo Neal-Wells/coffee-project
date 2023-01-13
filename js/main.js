@@ -1,16 +1,18 @@
 (() => {
   "use strict";
-
+  //global vars
   let filteredContainer = document.querySelector("#coffees");
   let addCoffeeButton = document.querySelector("#button-addon2");
   let roastSelection = document.querySelector("#roast-selection");
   let userGrind = document.querySelector("#grind");
   let usersCoffeeName = document.querySelector("#users-coffee-name");
 
-
+  //when changing the dropdown for roast, update coffees rendered
   roastSelection.onchange = (e) => {
     updateCoffees();
   };
+
+  //builds coffees to be rendered on html
   function renderCoffee(coffee) {
     let html = '<div class="coffee col-md-6">';
     html += `<h1 class="coffee-list-items coffee-name">` + coffee.name + "</h1>";
@@ -20,12 +22,15 @@
 
     return html;
   }
+
+  //sorts passed array by id
   function sortById(arr) {
     arr.sort(function (a, b) {
       return a.id - b.id;
     });
   }
 
+  //renders coffees on html
   function renderCoffees(coffeeToBeShown) {
     let html = "";
 
@@ -37,6 +42,7 @@
     return html;
   }
 
+  //updates coffees to be displayed
   function updateCoffees(filteredArr) {
     // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
@@ -108,35 +114,31 @@
     });
   }
 
+  //handles new coffees presented by user
   function addCoffee() {
-    let newCoffee = document
-      .getElementById("users-coffee-name")
-      .value.toString()
-      .trim();
-    let newCoffeeRoast = document
-      .getElementById("users-roast-choice")
-      .value.toString();
+    //get user's coffee info as strings
+    let newCoffee = document.getElementById("users-coffee-name").value.toString().trim();
+    let newCoffeeRoast = document.getElementById("users-roast-choice").value.toString();
     let grindType = userGrind.value.toString();
-    let cloneArr = coffees.slice();
-    userCoffees.forEach(userCoffee =>{
-      cloneArr.push(userCoffee);
-    })
 
+    //if coffee has valid name, add it to array
     if (verifyNewCoffee(newCoffee)) {
-      sortById(cloneArr);
+      sortById(combinedCoffees);
       userCoffees.push({
-        id: cloneArr[cloneArr.length - 1].id + 1,
+        id: combinedCoffees[combinedCoffees.length - 1].id + 1,
         name: toTitleCase(newCoffee),
         roast: newCoffeeRoast,
         grind: grindType
       });
       updateCombinedCoffees();
+      \//if new coffee's roast is selected on search, display it immediately
       if (
         newCoffeeRoast === roastSelection.value ||
         roastSelection.value === "all"
       ) {
         updateCoffees();
       }
+      //save new coffee
       saveData();
       document.getElementById("users-coffee-name").value = "";
     }
@@ -160,6 +162,7 @@
       inp.addEventListener("input", function (e) {
         
         let val = this.value;
+        //if no input, show all
         if (!val) {
           updateCoffees();
           return false;
@@ -212,9 +215,8 @@
   clearBtn.addEventListener('click', (e) =>{
     clearCache();
   })
-  
+
   function clearCache(){
-    console.log('clicked');
     localStorage.clear();
   }
   
