@@ -22,8 +22,8 @@ body {
 /*Navigation Styles*/
 
 .navbar-inner {
-  background-image: url("../images/whole-bean-coffee.png")  ;
-  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.6)));
+  background-image: url("../images/whole-bean-coffee.png");
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0.6)));
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -33,20 +33,25 @@ body {
   height: 105px;
   border-radius: 50%;
 }
+
 .nav-link-item-custom {
   color: #fff;
 }
+
 .nav-link-item-custom:hover {
   color: var(--accent-color-1);
 }
+
 .sign-in-icon {
   color: #fff;
 }
+
 .sign-in-btn {
   color: #fff;
   background-color: var(--main-bg-color);
   border: none;
 }
+
 .sign-in:hover {
   color: var(--accent-color-1);
 }
@@ -60,6 +65,7 @@ body {
   font-size: 3rem;
   text-transform: uppercase;
 }
+
 .first-word {
   font-family: var(--secondary-font-family);
   font-size: 1.5rem;
@@ -67,6 +73,7 @@ body {
   text-transform: uppercase;
   line-height: 5rem;
 }
+
 .company-year {
   color: var(--accent-color-4);
   font-family: var(--main-font-family);
@@ -74,21 +81,26 @@ body {
   font-size: 1.5rem;
   text-transform: uppercase;
 }
+
 .coffee-list-items {
   font-family: var(--main-font-family);
   font-weight: 200;
   word-break: break-word;
 }
+
 .coffee-name {
   font-weight: bold;
 }
+
 .roast-name {
   font-style: italic;
 }
+
 .btn {
   background-color: var(--main-bg-color);
   border: none;
 }
+
 .btn:active,
 btn:focus {
   border: none;
@@ -99,23 +111,38 @@ btn:focus {
   background-color: var(--main-bg-color);
   text-align: center;
 }
-.card-one-height, .card-two-height{
+
+.card-img-custom {
+  height: 22.3rem;
+}
+
+.card-one-height,
+.card-two-height {
   height: 94.8%;
 }
+
 .card-text-custom {
   font-family: var(--main-font-family);
   font-weight: 300;
 }
+
 .btn-custom {
   background-color: var(--accent-color-3);
 }
+
 img {
   width: 100%;
   height: 100%;
 }
+
+.form-custom {
+  margin-bottom: 10rem;
+}
+
 .accordion-item {
   background-color: var(--accordion-bg);
 }
+
 .coffee-list {
   margin: auto;
 }
@@ -124,17 +151,26 @@ img {
 .social-btn-bg {
   background-color: var(--accent-color-1);
 }
+
 .copyright {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 7px;
 }
+
 .company-link-footer {
   color: var(--footer-text-color);
 }
+
 .email-link {
   color: var(--footer-text-color);
   text-decoration: none;
   word-break: break-word;
+}
+
+.cache-custom{
+  display: flex;
+  margin: 5rem auto;
+  background-color: var(--accent-color-1);
 }
 
 /*End Of CSS Styles*/
@@ -142,28 +178,53 @@ img {
 /*Media Queries Styles*/
 
 /* X-Small Screen Size */
+
+@media screen and (min-width: 200px) and (max-width: 575px) {
+  .card-img-custom {
+    height: available;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .logo {
     width: 75px;
     height: 75px;
     border-radius: 50%;
   }
+
   .nar-bar-items {
     display: flex;
     align-items: center;
     margin-right: 2.7rem;
   }
+
   .company-name,
   .first-word,
   .company-year {
     font-size: 2rem;
   }
+
   .card-text-custom,
   .coffee-list-items {
     font-size: 1rem;
   }
+
   .list-of-roast {
     margin-top: 3rem;
+  }
+
+  .card-img-custom {
+    height: 22%;
+  }
+
+  .form-custom {
+    margin-bottom: 11rem;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 767px) {
+  .card-img-custom {
+    height: 8.5rem;
   }
 }
 
@@ -174,6 +235,10 @@ img {
     margin-right: 3rem;
     align-items: center;
   }
+
+  .form-custom {
+    margin-bottom: 16.5rem;
+  }
 }
 
 /*Medium-Large Screen Size*/
@@ -182,6 +247,14 @@ img {
     display: flex;
     margin-right: 3rem;
     align-items: center;
+  }
+
+  .card-img-custom {
+    height: 11.7rem;
+  }
+
+  .form-custom {
+    margin-bottom: 13rem;
   }
 }
 
@@ -192,8 +265,19 @@ img {
     margin: auto;
     align-content: center;
   }
+
   .nav-link-item-custom {
     margin: 0 2rem;
+  }
+
+  .card-img-custom {
+    height: 16rem;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1399px) {
+  .card-img-custom {
+    height: 19.1rem;
   }
 }
 
@@ -204,12 +288,18 @@ img {
     margin: auto;
     align-content: center;
   }
+
   .nav-link-item-custom {
     margin: 0 3rem;
   }
+
   .logo {
     width: 120px;
     height: 120px;
     border-radius: 50%;
   }
+
+  /*.card-img-custom{*/
+  /*  height: 22.3rem;*/
+  /*}*/
 }
