@@ -131,7 +131,7 @@
         grind: grindType
       });
       updateCombinedCoffees();
-      \//if new coffee's roast is selected on search, display it immediately
+      //if new coffee's roast is selected on search, display it immediately
       if (
         newCoffeeRoast === roastSelection.value ||
         roastSelection.value === "all"
