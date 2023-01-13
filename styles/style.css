@@ -31,7 +31,7 @@ body {
 .logo {
   width: 105px;
   height: 105px;
-  border-radius: 50%;
+  border-radius: 10%;
 }
 
 .nav-link-item-custom {
@@ -112,13 +112,10 @@ btn:focus {
   text-align: center;
 }
 
-.card-img-custom {
-  height: 22.3rem;
-}
-
-.card-one-height,
-.card-two-height {
-  height: 94.8%;
+.card-img-top {
+  max-height: 350px;
+  min-height: 300px;
+  object-fit: cover;
 }
 
 .card-text-custom {
@@ -130,17 +127,15 @@ btn:focus {
   background-color: var(--accent-color-3);
 }
 
-img {
-  width: 100%;
-  height: 100%;
+.form-titles{
+  margin: 2rem 0;
 }
-
-.form-custom {
-  margin-bottom: 10rem;
-}
-
 .accordion-item {
   background-color: var(--accordion-bg);
+}
+
+.accordion-header-custom{
+  margin-top: 8rem;
 }
 
 .coffee-list {
@@ -180,8 +175,8 @@ img {
 /* X-Small Screen Size */
 
 @media screen and (min-width: 200px) and (max-width: 575px) {
-  .card-img-custom {
-    height: available;
+  .card-text-custom{
+    font-size: 1.5rem;;
   }
 }
 
@@ -189,7 +184,7 @@ img {
   .logo {
     width: 75px;
     height: 75px;
-    border-radius: 50%;
+    border-radius: 10%;
   }
 
   .nar-bar-items {
@@ -206,27 +201,14 @@ img {
 
   .card-text-custom,
   .coffee-list-items {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .list-of-roast {
     margin-top: 3rem;
   }
-
-  .card-img-custom {
-    height: 22%;
-  }
-
-  .form-custom {
-    margin-bottom: 12rem;
-  }
 }
 
-@media screen and (min-width: 577px) and (max-width: 767px) {
-  .card-img-custom {
-    height: 8.5rem;
-  }
-}
 
 /* Small - Medium Screen Size */
 @media screen and (min-width: 577px) and (max-width: 768px) {
@@ -235,26 +217,19 @@ img {
     margin-right: 3rem;
     align-items: center;
   }
-  .form-custom {
-    margin-bottom: 16.5rem;
-  }
+ .custom-card{
+   margin-left: 3rem;
+ }
 }
 
 /*Medium-Large Screen Size*/
-@media screen and (min-width: 769px) and (max-width: 992px) {
+@media screen and (min-width: 767px) and (max-width: 992px) {
   .nar-bar-items {
     display: flex;
     margin-right: 3rem;
     align-items: center;
   }
 
-  .card-img-custom {
-    height: 11.7rem;
-  }
-
-  .form-custom {
-    margin-bottom: 13rem;
-  }
 }
 
 /*Large to X-Large Screen Size*/
@@ -269,15 +244,15 @@ img {
     margin: 0 2rem;
   }
 
-  .card-img-custom {
-    height: 16rem;
-  }
 }
 
-@media screen and (min-width: 1201px) and (max-width: 1399px) {
-  .card-img-custom {
-    height: 19.1rem;
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .card-img-top-1 {
+    max-height: 303px;
+    min-height: 250px;
+    object-fit: cover;
   }
+
 }
 
 /*X-Large to XXL Screen Size*/
@@ -295,6 +270,7 @@ img {
   .logo {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
+    border-radius: 10%;
   }
+
 }
