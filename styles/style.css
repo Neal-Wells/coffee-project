@@ -130,6 +130,9 @@ btn:focus {
 .form-titles{
   margin: 2rem 0;
 }
+.roast-selection-menu{
+  text-transform: capitalize;
+}
 .accordion-item {
   background-color: var(--accordion-bg);
 }
@@ -140,6 +143,9 @@ btn:focus {
 
 .coffee-list {
   margin: auto;
+}
+.users-grind{
+  text-transform: capitalize;
 }
 
 /*Footer Section Styles*/
@@ -178,6 +184,9 @@ btn:focus {
   .card-text-custom{
     font-size: 1.5rem;;
   }
+  .disclaimer{
+    font-size: 1rem;;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -206,6 +215,9 @@ btn:focus {
 
   .list-of-roast {
     margin-top: 3rem;
+  }
+  .disclaimer{
+    font-size: 1rem;;
   }
 }
 

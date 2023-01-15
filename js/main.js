@@ -14,7 +14,7 @@
 
   //builds coffees to be rendered on html
   function renderCoffee(coffee) {
-    let html = '<div class="coffee col-md-6">';
+    let html = '<div class="coffee col-md-6 my-5 roast-selection-menu">';
     html += `<h1 class="coffee-list-items coffee-name">` + coffee.name + "</h1>";
     html += `<p class="coffee-list-items roast-name">` + coffee.roast + "</p>";
     html += `<p class="coffee-list-items">` + coffee.grind + "</p>";
